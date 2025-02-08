@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "init-msw": "msw init public --save"
+    "init-msw": "msw init public --save",
+    "prepare": "husky"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.3",
@@ -37,6 +38,7 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+    "husky": "^9.1.7",
     "msw": "^2.7.0",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.11",

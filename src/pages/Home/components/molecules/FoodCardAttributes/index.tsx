@@ -34,16 +34,16 @@ export default function FoodCardAttributes({
 
   return (
     <div className="flex flex-row items-center gap-x-2">
-      <div className={cn('bg-custom-neutral-1 flex flex-row items-center gap-x-2 rounded-md px-4 py-2', className)}>
-        <Star className={cn('h-5 w-5 fill-neutral-600 text-neutral-600', iconClassName)} />
-        <p className={cn('font-semibold', textClassName)}>{formattedRating}</p>
+      <div className={cn('bg-custom-neutral-1 flex flex-row items-center gap-x-2 rounded-md px-2 py-1', className)}>
+        <Star className={cn('h-3 w-3 fill-neutral-600 text-neutral-600', iconClassName)} />
+        <p className={cn('text-xs font-semibold', textClassName)}>{formattedRating}</p>
       </div>
-      <div className={cn('bg-custom-neutral-1 flex flex-row items-center gap-x-2 rounded-md px-4 py-2', className)}>
-        <p className={cn('font-semibold', textClassName)}>{duration}</p>
+      <div className={cn('bg-custom-neutral-1 flex flex-row items-center gap-x-2 rounded-md px-2 py-1', className)}>
+        <p className={cn('text-xs', textClassName)}>{duration}</p>
       </div>
       {isNew && (
-        <div className={cn('bg-custom-neutral-1 flex flex-row items-center gap-x-2 rounded-md px-4 py-2', className)}>
-          <p className={cn('font-semibold text-green-700', textClassName)}>{t('new')}</p>
+        <div className={cn('bg-custom-neutral-1 flex flex-row items-center gap-x-2 rounded-md px-2 py-1', className)}>
+          <p className={cn('text-xs font-semibold text-green-700', textClassName)}>{t('new')}</p>
         </div>
       )}
     </div>

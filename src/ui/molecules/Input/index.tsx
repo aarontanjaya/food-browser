@@ -13,7 +13,7 @@ export default function Input({ 'data-testid': testId, LeftElement, inputClassNa
       <div
         data-testid={`${testId}:container`}
         className={cn(
-          'flex flex-1 flex-row items-center gap-x-3 rounded-md border border-neutral-200 bg-white p-2',
+          'flex flex-1 flex-row items-center gap-x-3 rounded-xl border border-neutral-200 bg-white p-3 px-5',
           inputClassName,
         )}
       >

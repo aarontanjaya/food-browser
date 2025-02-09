@@ -1,3 +1,4 @@
+import '@app/configs/locale';
 import queryConfig from '@app/configs/query';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { StrictMode, lazy } from 'react';

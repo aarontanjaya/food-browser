@@ -1,19 +1,21 @@
-import { createInstance } from "i18next";
-import LocaleOptions from "./index.types";
-import { initReactI18next } from "react-i18next";
-import baseEnTranslation from "@app/translations/en.translation.json";
+import LocaleOptions from './index.types';
+import homeEnTranslation from '@app/pages/Home/translations/en.translation.json';
+import baseEnTranslation from '@app/translations/en.translation.json';
+import { createInstance } from 'i18next';
+import { initReactI18next } from 'react-i18next';
 
 const resources = {
   [LocaleOptions.EN]: {
     base: baseEnTranslation,
+    home: homeEnTranslation,
   },
 } as const;
 
 export type LocaleResource = (typeof resources)[LocaleOptions.EN];
 
 export const i18n = createInstance({
-  compatibilityJSON: "v4",
-  debug: process.env.NODE_ENV === "development",
+  compatibilityJSON: 'v4',
+  debug: process.env.NODE_ENV === 'development',
   defaultNS: false,
   fallbackLng: LocaleOptions.EN,
   fallbackNS: false,

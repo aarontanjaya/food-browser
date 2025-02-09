@@ -14,6 +14,7 @@ const twMerge = extendTailwindMerge({
     theme: {
       color: [
         {
+          'custom-neutral': ['1'],
           'green-neon': ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
         },
       ],

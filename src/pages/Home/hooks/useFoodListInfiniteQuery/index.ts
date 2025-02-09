@@ -10,13 +10,15 @@ type UseFoodListInfiniteQueryProps<Data> = {
 export default function useFoodListInfiniteQuery<Data>({
   limit,
   categoryId,
+  search,
   selector,
 }: UseFoodListInfiniteQueryProps<Data>) {
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading, isPending } = useInfiniteQuery({
     getNextPageParam: getInfiniteQueryNextPageParam,
     initialPageParam: 1,
-    queryFn: ({ pageParam, signal }) => foodRepository.getFoodList({ page: pageParam, limit, categoryId }, signal),
-    queryKey: [useFoodListQuery.queryKey, categoryId, limit],
+    queryFn: ({ pageParam, signal }) =>
+      foodRepository.getFoodList({ page: pageParam, limit, categoryId, search }, signal),
+    queryKey: [useFoodListQuery.queryKey, categoryId, limit, search],
     select: selector,
   });
 

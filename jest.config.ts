@@ -10,6 +10,11 @@ const config: Config = {
   moduleFileExtensions: ['tsx', 'ts', 'html', 'jsx', 'js'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testEnvironment: 'jsdom',
+  moduleNameMapper: {
+    '^@app/(.*)$': '<rootDir>/src/$1',
+    '^@utils$': '<rootDir>/src/utils/index.ts',
+    '^@ui$': '<rootDir>/src/ui/index.ts',
+  },
   transform: {
     '^.+\\.(ts|js|tsx|jsx)$': [
       '@swc/jest',

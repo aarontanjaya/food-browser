@@ -1,17 +1,17 @@
 import { PaginatedResponse, PaginationParams } from '@app/services/common';
 
 // Move to a new service module e.g. promotion if usecase expands
-export enum FoodPromotion {
+export enum RestaurantPromotion {
   Gift = 'gift',
   Bogo = '1+1',
   Discount = 'discount',
 }
 
-export type Food = {
+export type Restaurant = {
   id: string;
   index: number;
   rating: number;
-  promotion: FoodPromotion | null;
+  promotion: RestaurantPromotion | null;
   isNew: boolean;
   categoryId: string;
   minCookTime: number;
@@ -21,8 +21,8 @@ export type Food = {
   imageUrl: string;
 };
 
-export type GetFoodParams = {
+export type GetRestaurantParams = {
   categoryId?: string;
 } & PaginationParams;
 
-export type GetFoodResponse = PaginatedResponse<Food[]>;
+export type GetRestaurantResponse = PaginatedResponse<Restaurant[]>;

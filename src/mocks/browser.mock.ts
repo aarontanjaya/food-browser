@@ -1,7 +1,7 @@
 import { mockCommonHandlers } from '@app/services/common';
-import { mockFoodHandlers } from '@app/services/food';
+import { mockRestaurantHandlers } from '@app/services/restaurant';
 import { setupWorker } from 'msw/browser';
 
-const browser = setupWorker(...mockCommonHandlers, ...mockFoodHandlers);
+const browser = setupWorker(...mockCommonHandlers, ...mockRestaurantHandlers);
 
 export default browser;

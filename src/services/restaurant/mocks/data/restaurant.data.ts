@@ -1,4 +1,4 @@
-export const MOCK_FOOD_LIST = [
+export const MOCK_RESTAURANT_LIST = [
   {
     id: '628b5decc94a27754f30e6f1',
     index: 0,

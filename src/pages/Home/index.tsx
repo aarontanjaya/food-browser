@@ -1,18 +1,18 @@
-import FoodCard from './components/molecules/FoodCard';
+import RestaurantCard from './components/molecules/RestaurantCard';
 import useHomeViewModel from './index.view-model';
 import { Button, Input, Selections } from '@ui';
 import { Search } from 'lucide-react';
 
 export default function Home() {
   const {
-    foodList,
-    foodCategories,
+    restaurantList,
+    restaurantCategories,
     search,
     setSearch,
     t,
     selectedCategoryId,
     toggleCategoryId,
-    fetchNextFoodListPage,
+    fetchNextRestaurantListPage,
   } = useHomeViewModel();
 
   return (
@@ -31,13 +31,13 @@ export default function Home() {
           }}
           className="my-15"
           value={selectedCategoryId || ''}
-          items={foodCategories?.map((item) => ({ label: item.name, key: item.id, value: item.id })) || []}
+          items={restaurantCategories?.map((item) => ({ label: item.name, key: item.id, value: item.id })) || []}
         />
         <div className="grid w-full grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
-          {foodList?.data.map((item) => <FoodCard key={item.id} data={item} />)}
+          {restaurantList?.data.map((item) => <RestaurantCard key={item.id} data={item} />)}
         </div>
         <div className="flex w-full items-center justify-center py-20">
-          <Button onClick={() => fetchNextFoodListPage()}>{t('show-more')}</Button>
+          <Button onClick={() => fetchNextRestaurantListPage()}>{t('show-more')}</Button>
         </div>
       </div>
     </div>

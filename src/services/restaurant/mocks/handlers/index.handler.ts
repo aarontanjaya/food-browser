@@ -1,15 +1,15 @@
-import { MOCK_FOOD_LIST } from '../data/index.data';
+import { MOCK_RESTAURANT_LIST } from '../data/restaurant.data';
 import { http, HttpHandler, HttpResponse } from 'msw';
 
-const mockFoodHandlers: HttpHandler[] = [
-  http.get('/food', ({ request }) => {
+const mockRestaurantHandlers: HttpHandler[] = [
+  http.get('/restaurant', ({ request }) => {
     const url = new URL(request.url);
     const categoryId = url.searchParams.get('categoryId');
     const page = parseInt(url.searchParams.get('page') || '1', 10);
     const limit = parseInt(url.searchParams.get('limit') || '10', 10);
     const search = url.searchParams.get('search') || '';
 
-    let filteredData = MOCK_FOOD_LIST;
+    let filteredData = MOCK_RESTAURANT_LIST;
 
     if (categoryId) {
       filteredData = filteredData.filter((item) => item.categoryId === categoryId);
@@ -57,4 +57,4 @@ const mockFoodHandlers: HttpHandler[] = [
   }),
 ];
 
-export default mockFoodHandlers;
+export default mockRestaurantHandlers;

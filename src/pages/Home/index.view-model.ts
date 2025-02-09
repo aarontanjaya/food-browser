@@ -1,5 +1,5 @@
-import useFoodCategoryQuery from './hooks/useFoodCategoryQuery';
-import useFoodListInfiniteQuery from './hooks/useFoodListInfiniteQuery';
+import useRestaurantCategoryQuery from './hooks/useRestaurantCategoryQuery';
+import useRestaurantListInfiniteQuery from './hooks/useRestaurantListInfiniteQuery';
 import { useDebounced, useToggleValue } from '@utils';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -10,13 +10,13 @@ export default function useHomeViewModel() {
   const [search, setSearch] = useState('');
   const debouncedSearch = useDebounced(search, 300);
 
-  const { data: foodCategories, isPending: isFoodCategoriesLoading } = useFoodCategoryQuery();
+  const { data: restaurantCategories, isPending: isRestaurantCategoriesLoading } = useRestaurantCategoryQuery();
   const {
-    data: foodList,
-    isPending: isFoodListLoading,
-    hasNextPage: foodListHasNextPage,
-    fetchNextPage: fetchNextFoodListPage,
-  } = useFoodListInfiniteQuery({
+    data: restaurantList,
+    isPending: isRestaurantListLoading,
+    hasNextPage: restaurantListHasNextPage,
+    fetchNextPage: fetchNextRestaurantListPage,
+  } = useRestaurantListInfiniteQuery({
     categoryId: selectedCategoryId || '',
     limit: 9,
     search: debouncedSearch,
@@ -26,16 +26,16 @@ export default function useHomeViewModel() {
   });
 
   return {
-    foodList,
-    isFoodListLoading,
-    foodListHasNextPage,
+    restaurantList,
+    isRestaurantListLoading,
+    restaurantListHasNextPage,
     setSearch,
     search,
     toggleCategoryId,
     selectedCategoryId,
-    fetchNextFoodListPage,
-    foodCategories,
-    isFoodCategoriesLoading,
+    fetchNextRestaurantListPage,
+    restaurantCategories,
+    isRestaurantCategoriesLoading,
     t,
   };
 }

@@ -3,7 +3,7 @@ import { Star } from 'lucide-react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-type FoodCardAttributesProps = {
+type RestaurantCardAttributesProps = {
   rating: number;
   duration: string;
   isNew: boolean;
@@ -12,14 +12,14 @@ type FoodCardAttributesProps = {
   iconClassName?: string;
 };
 
-export default function FoodCardAttributes({
+export default function RestaurantCardAttributes({
   rating,
   duration,
   className,
   isNew,
   textClassName,
   iconClassName,
-}: FoodCardAttributesProps) {
+}: RestaurantCardAttributesProps) {
   const { t } = useTranslation('home');
 
   const formattedRating = useMemo(() => {

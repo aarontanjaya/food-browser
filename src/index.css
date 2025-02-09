@@ -1,4 +1,4 @@
 @import 'tailwindcss';
-@import 'tailwindcss/preflight';
+@config '../tailwind.config.ts';
 
 @tailwind utilities;

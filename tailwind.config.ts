@@ -1,6 +1,17 @@
 import { type Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
+  plugins: [
+    plugin((api) => {
+      api.addUtilities({
+        '.scrollbar-hidden': {
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none',
+        },
+      });
+    }),
+  ],
   content: ['./App.{js,jsx,ts,tsx}', './index.html', './src/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {

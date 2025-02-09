@@ -1,4 +1,6 @@
 // #region ATOMS
+export { default as Button } from './atoms/Button';
+export { default as Chip } from './atoms/Chip';
 export { default as Tab } from './atoms/Tab';
 // #endregion
 

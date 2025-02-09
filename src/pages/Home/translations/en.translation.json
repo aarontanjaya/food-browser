@@ -1,6 +1,7 @@
 {
   "search-placeholder": "Enter restaurant name...",
   "new": "$t(base:new)",
+  "show-more": "Show More",
   "time": {
     "minute": "{{value}} $t(base:time:minute)"
   }

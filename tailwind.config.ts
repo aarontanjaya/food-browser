@@ -4,7 +4,7 @@ const config: Config = {
   content: ['./App.{js,jsx,ts,tsx}', './index.html', './src/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      sans: ['"Inter"', 'sans-serif'],
+      sans: ['Poppins', 'sans-serif'],
     },
     extend: {
       colors: {

@@ -1,4 +1,4 @@
-import foodRepository from '@app/services/food';
+import { foodRepository } from '@app/services/food';
 import { useQuery } from '@tanstack/react-query';
 
 export default function useFoodCategoryQuery() {

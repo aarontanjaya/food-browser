@@ -1,6 +1,36 @@
+import { MOCK_FOOD_LIST } from '../data/index.data';
 import { http, HttpHandler, HttpResponse } from 'msw';
 
 const mockFoodHandlers: HttpHandler[] = [
+  http.get('/food', ({ request }) => {
+    const url = new URL(request.url);
+    const categoryId = url.searchParams.get('categoryId');
+    const page = parseInt(url.searchParams.get('page') || '1', 10);
+    const limit = parseInt(url.searchParams.get('limit') || '10', 10);
+    const search = url.searchParams.get('search') || '';
+
+    let filteredData = MOCK_FOOD_LIST;
+
+    if (categoryId) {
+      filteredData = filteredData.filter((item) => item.categoryId === categoryId);
+    }
+
+    if (search) {
+      const lowerSearch = search.toLowerCase();
+      filteredData = filteredData.filter((item) => item.name.toLowerCase().includes(lowerSearch));
+    }
+
+    const startIndex = (page - 1) * limit;
+    const endIndex = startIndex + limit;
+    const paginatedData = filteredData.slice(startIndex, endIndex);
+
+    return HttpResponse.json({
+      data: paginatedData,
+      total: filteredData.length,
+      page,
+      limit,
+    });
+  }),
   http.get('/categories', () => {
     return HttpResponse.json([
       {

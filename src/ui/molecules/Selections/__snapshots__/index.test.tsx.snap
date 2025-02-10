@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Selections should render correctly without error and have required components 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="scrollbar-hidden flex flex-row overflow-x-auto"
+        data-testid="selection:container"
+      >
+        <div
+          class="hidden flex-row md:flex"
+          data-testid="selection:tab:container"
+        >
+          <button
+            class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 bg-white px-4 py-3 text-neutral-600 hover:cursor-pointer border-green-neon-300 hidden rounded-none border border-r border-l-0 first:rounded-l-lg first:border-l last:rounded-r-lg md:block"
+            data-active="true"
+            data-testid="selection:tab:key1:container"
+          >
+            Item 1
+          </button>
+          <button
+            class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 bg-white px-4 py-3 text-neutral-600 hover:cursor-pointer border-green-neon-300 hidden rounded-none border border-r border-l-0 first:rounded-l-lg first:border-l last:rounded-r-lg md:block"
+            data-active="false"
+            data-testid="selection:tab:key2:container"
+          >
+            Item 2
+          </button>
+        </div>
+        <div
+          class="flex flex-row gap-x-3 md:hidden"
+          data-testid="selection:chip:container"
+        >
+          <button
+            class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 rounded-l-full rounded-r-full bg-white px-6 py-3 text-neutral-600 hover:cursor-pointer border-green-neon-300 line-clamp-1 shrink-0 text-nowrap md:hidden"
+            data-active="true"
+            data-testid="selection:chip:key1:container"
+          >
+            Item 1
+          </button>
+          <button
+            class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 rounded-l-full rounded-r-full bg-white px-6 py-3 text-neutral-600 hover:cursor-pointer border-green-neon-300 line-clamp-1 shrink-0 text-nowrap md:hidden"
+            data-active="false"
+            data-testid="selection:chip:key2:container"
+          >
+            Item 2
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="scrollbar-hidden flex flex-row overflow-x-auto"
+      data-testid="selection:container"
+    >
+      <div
+        class="hidden flex-row md:flex"
+        data-testid="selection:tab:container"
+      >
+        <button
+          class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 bg-white px-4 py-3 text-neutral-600 hover:cursor-pointer border-green-neon-300 hidden rounded-none border border-r border-l-0 first:rounded-l-lg first:border-l last:rounded-r-lg md:block"
+          data-active="true"
+          data-testid="selection:tab:key1:container"
+        >
+          Item 1
+        </button>
+        <button
+          class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 bg-white px-4 py-3 text-neutral-600 hover:cursor-pointer border-green-neon-300 hidden rounded-none border border-r border-l-0 first:rounded-l-lg first:border-l last:rounded-r-lg md:block"
+          data-active="false"
+          data-testid="selection:tab:key2:container"
+        >
+          Item 2
+        </button>
+      </div>
+      <div
+        class="flex flex-row gap-x-3 md:hidden"
+        data-testid="selection:chip:container"
+      >
+        <button
+          class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 rounded-l-full rounded-r-full bg-white px-6 py-3 text-neutral-600 hover:cursor-pointer border-green-neon-300 line-clamp-1 shrink-0 text-nowrap md:hidden"
+          data-active="true"
+          data-testid="selection:chip:key1:container"
+        >
+          Item 1
+        </button>
+        <button
+          class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 rounded-l-full rounded-r-full bg-white px-6 py-3 text-neutral-600 hover:cursor-pointer border-green-neon-300 line-clamp-1 shrink-0 text-nowrap md:hidden"
+          data-active="false"
+          data-testid="selection:chip:key2:container"
+        >
+          Item 2
+        </button>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -1,5 +1,6 @@
 import useRestaurantCategoryQuery from './hooks/useRestaurantCategoryQuery';
 import useRestaurantListInfiniteQuery from './hooks/useRestaurantListInfiniteQuery';
+import useInfiniteContentScrollHandler from '@app/hooks/useInfiniteContentScrollHandler.hook';
 import { useDebounced, useToggleValue } from '@utils';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -13,7 +14,8 @@ export default function useHomeViewModel() {
   const { data: restaurantCategories, isPending: isRestaurantCategoriesLoading } = useRestaurantCategoryQuery();
   const {
     data: restaurantList,
-    isPending: isRestaurantListLoading,
+    isLoading: isRestaurantListLoading,
+    isPending: isRestaurantListPending,
     hasNextPage: restaurantListHasNextPage,
     fetchNextPage: fetchNextRestaurantListPage,
   } = useRestaurantListInfiniteQuery({
@@ -25,11 +27,21 @@ export default function useHomeViewModel() {
     },
   });
 
+  const { endListRef, listContainerRef, scrollContainerRef } = useInfiniteContentScrollHandler({
+    enabled:
+      !isRestaurantListLoading && restaurantListHasNextPage && !isRestaurantListPending && restaurantList?.page !== 1,
+    intersectionThreshold: 0.75,
+    onLoadMore: fetchNextRestaurantListPage,
+  });
+
   return {
     restaurantList,
-    isRestaurantListLoading,
+    isRestaurantListPending,
     restaurantListHasNextPage,
     setSearch,
+    endListRef,
+    listContainerRef,
+    scrollContainerRef,
     search,
     toggleCategoryId,
     selectedCategoryId,

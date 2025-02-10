@@ -6,14 +6,14 @@ exports[`Tab should render correctly without error 1`] = `
   "baseElement": <body>
     <div>
       <button
-        class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 rounded-lg bg-white px-4 py-3 text-neutral-600 hover:cursor-pointer"
+        class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 rounded-lg bg-white px-6 py-3 text-neutral-600 hover:cursor-pointer"
         data-testid="tab:container"
       />
     </div>
   </body>,
   "container": <div>
     <button
-      class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 rounded-lg bg-white px-4 py-3 text-neutral-600 hover:cursor-pointer"
+      class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 rounded-lg bg-white px-6 py-3 text-neutral-600 hover:cursor-pointer"
       data-testid="tab:container"
     />
   </div>,

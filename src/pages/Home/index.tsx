@@ -16,12 +16,12 @@ export default function Home() {
   } = useHomeViewModel();
 
   return (
-    <div className="bg-custom-neutral-1 flex min-h-screen w-full flex-col items-center pt-10">
-      <div className="flex w-full max-w-[75rem] flex-col px-8">
+    <div className="bg-custom-neutral-1 flex min-h-screen w-full flex-col items-center pt-5 md:pt-10">
+      <div className="flex w-full max-w-[75rem] flex-col px-4 md:px-8">
         <Input
           value={search}
           onChange={(val) => setSearch(val.target.value)}
-          className="bg-custom-neutral-1 w-full max-w-[20rem]"
+          className="bg-custom-neutral-1 w-full max-w-[22rem]"
           LeftElement={<Search className="h-6 w-6 text-neutral-400" />}
           placeholder="Enter restaurant name..."
         />
@@ -29,11 +29,18 @@ export default function Home() {
           onChange={(val) => {
             toggleCategoryId(val);
           }}
-          className="my-15"
+          className="my-5 md:my-15"
           value={selectedCategoryId || ''}
-          items={restaurantCategories?.map((item) => ({ label: item.name, key: item.id, value: item.id })) || []}
+          items={[
+            {
+              key: 'all',
+              value: '',
+              label: t('category.all'),
+            },
+            ...(restaurantCategories?.map((item) => ({ label: item.name, key: item.id, value: item.id })) || []),
+          ]}
         />
-        <div className="grid w-full grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
+        <div className="grid w-full grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 md:gap-6">
           {restaurantList?.data.map((item) => <RestaurantCard key={item.id} data={item} />)}
         </div>
         <div className="flex w-full items-center justify-center py-20">

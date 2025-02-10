@@ -33,32 +33,32 @@ export default function RestaurantCardAttributes({
   }, [rating]);
 
   return (
-    <div className="scrollbar-hidden flex flex-row items-center gap-x-2 overflow-x-auto">
+    <div className="scrollbar-hidden flex flex-row flex-wrap items-center gap-x-1.5 gap-y-1.5 overflow-x-auto md:gap-x-2">
       <div
         className={cn(
-          'bg-custom-neutral-1 flex shrink-0 flex-row items-center gap-x-2 rounded-md px-2 py-1',
+          'bg-custom-neutral-1 flex shrink-0 flex-row items-center gap-x-1 rounded-md px-2 py-1 md:gap-x-2',
           className,
         )}
       >
-        <Star className={cn('h-3 w-3 fill-neutral-600 text-neutral-600', iconClassName)} />
-        <p className={cn('text-xs font-semibold', textClassName)}>{formattedRating}</p>
+        <Star className={cn('h-2.5 w-2.5 fill-neutral-600 text-neutral-600 md:h-3 md:w-3', iconClassName)} />
+        <p className={cn('text-xxs font-semibold md:text-xs', textClassName)}>{formattedRating}</p>
       </div>
       <div
         className={cn(
-          'bg-custom-neutral-1 flex shrink-0 flex-row items-center gap-x-2 rounded-md px-2 py-1',
+          'bg-custom-neutral-1 flex shrink-0 flex-row items-center gap-x-1 rounded-md px-2 py-1 md:gap-x-2',
           className,
         )}
       >
-        <p className={cn('text-xs', textClassName)}>{duration}</p>
+        <p className={cn('text-xxs md:text-xs', textClassName)}>{duration}</p>
       </div>
       {isNew && (
         <div
           className={cn(
-            'bg-custom-neutral-1 flex shrink-0 flex-row items-center gap-x-2 rounded-md px-2 py-1',
+            'bg-custom-neutral-1 flex shrink-0 flex-row items-center gap-x-1 rounded-md px-2 py-1 md:gap-x-2',
             className,
           )}
         >
-          <p className={cn('text-xs font-semibold text-green-700', textClassName)}>{t('new')}</p>
+          <p className={cn('text-xxs font-semibold text-green-700 md:text-xs', textClassName)}>{t('new')}</p>
         </div>
       )}
     </div>

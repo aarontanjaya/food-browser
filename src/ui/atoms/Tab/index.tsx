@@ -11,7 +11,7 @@ export default function Tab({ 'data-testid': testId, className, isActive, ...res
     <button
       data-active={isActive}
       className={cn(
-        'data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 rounded-lg bg-white px-4 py-3 text-neutral-600 hover:cursor-pointer',
+        'data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 rounded-lg bg-white px-6 py-3 text-neutral-600 hover:cursor-pointer',
         className,
       )}
       data-testid={`${testId}:container`}

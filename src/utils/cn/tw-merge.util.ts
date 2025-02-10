@@ -11,6 +11,13 @@ import { extendTailwindMerge } from 'tailwind-merge';
 
 const twMerge = extendTailwindMerge({
   extend: {
+    classGroups: {
+      'font-size': [
+        {
+          text: ['xxs'],
+        },
+      ],
+    },
     theme: {
       color: [
         {

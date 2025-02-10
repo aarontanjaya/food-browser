@@ -18,6 +18,9 @@ const config: Config = {
       sans: ['Poppins', 'sans-serif'],
     },
     extend: {
+      fontSize: {
+        xxs: ['0.625rem', { lineHeight: 'calc(13.3/10)' }],
+      },
       colors: {
         'custom-neutral': {
           1: '#f7f8fa',

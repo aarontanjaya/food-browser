@@ -14,14 +14,14 @@ exports[`Selections should render correctly without error and have required comp
           data-testid="selection:tab:container"
         >
           <button
-            class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 bg-white px-4 py-3 text-neutral-600 hover:cursor-pointer border-green-neon-300 hidden rounded-none border border-r border-l-0 first:rounded-l-lg first:border-l last:rounded-r-lg md:block"
+            class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 bg-white px-6 py-3 text-neutral-600 hover:cursor-pointer border-green-neon-300 hidden rounded-none border border-r border-l-0 first:rounded-l-lg first:border-l last:rounded-r-lg md:block"
             data-active="true"
             data-testid="selection:tab:key1:container"
           >
             Item 1
           </button>
           <button
-            class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 bg-white px-4 py-3 text-neutral-600 hover:cursor-pointer border-green-neon-300 hidden rounded-none border border-r border-l-0 first:rounded-l-lg first:border-l last:rounded-r-lg md:block"
+            class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 bg-white px-6 py-3 text-neutral-600 hover:cursor-pointer border-green-neon-300 hidden rounded-none border border-r border-l-0 first:rounded-l-lg first:border-l last:rounded-r-lg md:block"
             data-active="false"
             data-testid="selection:tab:key2:container"
           >
@@ -60,14 +60,14 @@ exports[`Selections should render correctly without error and have required comp
         data-testid="selection:tab:container"
       >
         <button
-          class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 bg-white px-4 py-3 text-neutral-600 hover:cursor-pointer border-green-neon-300 hidden rounded-none border border-r border-l-0 first:rounded-l-lg first:border-l last:rounded-r-lg md:block"
+          class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 bg-white px-6 py-3 text-neutral-600 hover:cursor-pointer border-green-neon-300 hidden rounded-none border border-r border-l-0 first:rounded-l-lg first:border-l last:rounded-r-lg md:block"
           data-active="true"
           data-testid="selection:tab:key1:container"
         >
           Item 1
         </button>
         <button
-          class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 bg-white px-4 py-3 text-neutral-600 hover:cursor-pointer border-green-neon-300 hidden rounded-none border border-r border-l-0 first:rounded-l-lg first:border-l last:rounded-r-lg md:block"
+          class="data-[active=true]:bg-green-neon-100 data-[active=true]:text-green-neon-900 bg-white px-6 py-3 text-neutral-600 hover:cursor-pointer border-green-neon-300 hidden rounded-none border border-r border-l-0 first:rounded-l-lg first:border-l last:rounded-r-lg md:block"
           data-active="false"
           data-testid="selection:tab:key2:container"
         >

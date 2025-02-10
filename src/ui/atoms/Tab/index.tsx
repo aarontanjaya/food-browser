@@ -16,6 +16,6 @@ export default function Tab({ 'data-testid': testId, className, isActive, ...res
       )}
       data-testid={`${testId}:container`}
       {...rest}
-    ></button>
+    />
   );
 }

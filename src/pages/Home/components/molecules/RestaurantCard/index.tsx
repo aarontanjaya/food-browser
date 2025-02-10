@@ -1,5 +1,6 @@
 import RestaurantCardAttributes from '../RestaurantCardAttributes';
 import RestaurantPromotionFlag from '../RestaurantPromotionFlag';
+import RestaurantCardSkeleton from './index.skeleton';
 import { Restaurant } from '@app/services/restaurant';
 import { useTranslation } from 'react-i18next';
 
@@ -29,3 +30,5 @@ export default function RestaurantCard({ data }: RestaurantCardProps) {
     </div>
   );
 }
+
+RestaurantCard.Skeleton = RestaurantCardSkeleton;

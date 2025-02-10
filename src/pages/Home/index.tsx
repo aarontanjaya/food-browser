@@ -8,6 +8,7 @@ export default function Home() {
   const {
     restaurantList,
     restaurantCategories,
+    isRestaurantListLoading,
     search,
     setSearch,
     t,
@@ -47,6 +48,13 @@ export default function Home() {
         />
         <div className="grid w-full grid-cols-2 gap-3 md:grid-cols-3 md:gap-6">
           {restaurantList?.data.map((item) => <RestaurantCard key={item.id} data={item} />)}
+          {isRestaurantListLoading && (
+            <>
+              <RestaurantCard.Skeleton />
+              <RestaurantCard.Skeleton />
+              <RestaurantCard.Skeleton />
+            </>
+          )}
         </div>
         <div className="flex w-full items-center justify-center py-20">
           <Button onClick={() => fetchNextRestaurantListPage()}>{t('show-more')}</Button>

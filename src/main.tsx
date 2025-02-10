@@ -1,4 +1,3 @@
-import App from './App.tsx';
 import AppContainer from './app/container/index.tsx';
 import './index.css';
 import { createRoot } from 'react-dom/client';
@@ -11,9 +10,5 @@ async function deferRender() {
 }
 
 deferRender().then(() => {
-  root.render(
-    <AppContainer>
-      <App />
-    </AppContainer>,
-  );
+  root.render(<AppContainer />);
 });

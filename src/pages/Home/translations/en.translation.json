@@ -1,6 +1,10 @@
 {
   "search-placeholder": "Enter restaurant name...",
   "new": "$t(base:new)",
+  "helmet": {
+    "title": "Find Your Favorite Restaurant",
+    "description": "Website to search for your favorite restaurant"
+  },
   "category": {
     "all": "All"
   },
